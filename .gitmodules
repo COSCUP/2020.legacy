@@ -1,3 +1,6 @@
 [submodule "landing"]
 	path = landing
 	url = https://github.com/COSCUP/2020-landing.git
+[submodule "main"]
+	path = main
+	url = https://github.com/COSCUP/2020-main.git
