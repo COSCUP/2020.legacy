@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 set -e
 
+git submodule update --init --depth 1
+
 # build
 if [ -d dist ]; then
   rm -rf dist
