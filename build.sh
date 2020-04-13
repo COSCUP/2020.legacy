@@ -2,6 +2,8 @@
 set -e
 
 git submodule update --init --depth 1
+git submodule foreach --recursive git fetch --all
+git submodule foreach --recursive git reset --hard origin/master
 
 # build
 if [ -d dist ]; then
@@ -12,7 +14,7 @@ mkdir dist
 cp -R landing/ dist/landing
 
 cd main
-npm i
+npm ci
 npm run build
 mv dist/* ../dist/
 rm -rf dist/
