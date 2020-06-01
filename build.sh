@@ -14,10 +14,9 @@ mkdir dist
 cp -R landing/ dist/landing
 
 cd main
-npm ci
-npm run build
-mv dist/* ../dist/
-rm -rf dist/
+git checkout gh-pages
+mv ./* ../dist/
+git reset --hard origin/master
 cd -
 
 # replace index.html with temporary index.html
