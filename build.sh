@@ -18,7 +18,3 @@ git checkout gh-pages
 mv ./* ../dist/
 git reset --hard origin/master
 cd -
-
-# replace index.html with temporary index.html
-# remove this line when the main page is online
-rm dist/index.html && cp index.html dist/index.html
